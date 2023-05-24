@@ -42,6 +42,7 @@
     "postcss-preset-env": "^7.8.3",
     "postcss-reporter": "^7.0.5",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended": "^9.0.0",
