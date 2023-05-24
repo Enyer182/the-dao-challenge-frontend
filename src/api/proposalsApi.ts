@@ -2,6 +2,7 @@ import api from './api';
 
 const URLS = {
   fetchProposals: 'proposals',
+  voteProposals: 'vote',
 };
 
 export type ProposalData = {
@@ -25,6 +26,13 @@ export type ProposalList = {
   proposals: ProposalData[];
 };
 
+export const voteForProposal = (proposalId: string, voteOption: boolean) => {
+  return api.post(
+    `${URLS.voteProposals}`,
+    { proposalId, voteOption },
+    { baseURL: 'http://localhost:3000/' }
+  );
+};
 export const fetchProposals = () => {
   return api.get<ProposalList>(URLS.fetchProposals, {
     baseURL: 'http://localhost:3000/',
