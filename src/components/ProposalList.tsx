@@ -6,27 +6,19 @@ interface ProposalListProps {
   handleVote: (proposalId: string, voteOption: boolean) => Promise<void>;
   votedProposals: Record<string, boolean>;
   errorMessage: string;
-}
-
-interface ProposalListProps {
-  proposals: ProposalData[];
-  handleVote: (proposalId: string, voteOption: boolean) => Promise<void>;
-  votedProposals: Record<string, boolean>;
+  voteStatus: Record<string, 'idle' | 'pending' | 'success' | 'error'>; // Updated type
 }
 
 const ProposalList: React.FC<ProposalListProps> = ({
   proposals,
   handleVote,
-  votedProposals,
   errorMessage,
+  voteStatus,
 }) => {
   return (
     <div className='bg-white p-6 rounded-md shadow-md'>
       <h1 className='text-2xl font-bold mb-4'>Proposals</h1>
       {proposals.map((proposal) => {
-        const hasVoted = votedProposals[proposal.id];
-        const voteFailed = hasVoted && !votedProposals[proposal.id];
-
         return (
           <div key={proposal.id} className='mb-6'>
             <h2 className='text-lg font-semibold'>{proposal.title}</h2>
@@ -60,7 +52,12 @@ const ProposalList: React.FC<ProposalListProps> = ({
                 Vote B
               </button>
             </div>
-            {voteFailed && <p className='text-red-500'>{errorMessage}</p>}
+            {voteStatus[proposal.id] === 'success' && (
+              <p className='text-green-500'>Vote recorded successfully</p>
+            )}
+            {voteStatus[proposal.id] === 'error' && (
+              <p className='text-red-500'>{errorMessage}</p>
+            )}
             <p className='mt-2'>
               Winning option so far:{' '}
               <span className='font-semibold'>

@@ -57,7 +57,11 @@ function ProposalComponent() {
   const [errorMessage, setErrorMessage] = useState('');
   const [votedProposals, setVotedProposals] = useState<Record<string, boolean>>(
     {}
-  ); // add this line
+  );
+
+  const [voteStatus, setVoteStatus] = useState<
+    Record<string, 'idle' | 'pending' | 'success' | 'error'>
+  >({});
 
   const handleVote = async (
     proposalId: string,
@@ -68,14 +72,27 @@ function ProposalComponent() {
         voteForProposal(proposalId, voteOption)
       );
       if (error) {
-        setErrorMessage('Failed to vote');
+        setErrorMessage(
+          'Failed to vote Maybe you tried voting this proposal already?'
+        );
+        setVoteStatus((voteStatus) => ({
+          ...voteStatus,
+          [proposalId]: 'error',
+        }));
         console.error('Failed to vote:', ERROR);
       } else if (response) {
-        setVotedProposals({ ...votedProposals, [proposalId]: true }); // update votedProposals
+        setVotedProposals({ ...votedProposals, [proposalId]: true }); // update votedProposals}
+        setVoteStatus((voteStatus) => ({
+          ...voteStatus,
+          [proposalId]: 'success',
+        }));
         fetchProposalsData();
       }
     } catch (error) {
-      setErrorMessage('Failed to vote');
+      setErrorMessage(
+        'Failed to vote Maybe you tried voting this same proposal?'
+      );
+      setVoteStatus((voteStatus) => ({ ...voteStatus, [proposalId]: 'error' }));
       console.error('Failed to vote:', error);
     }
   };
@@ -94,6 +111,7 @@ function ProposalComponent() {
               handleVote={handleVote}
               votedProposals={votedProposals}
               errorMessage={errorMessage}
+              voteStatus={voteStatus}
             ></ProposalList>
           </>
         )}
