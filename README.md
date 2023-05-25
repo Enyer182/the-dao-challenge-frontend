@@ -41,9 +41,6 @@ the-dao-challenge-frontend
 - [🏎💨 Getting Started](#-getting-started)
 - [🗺 Roadmap](#-roadmap)
 - [🤝 Contributing](#-contributing)
-- [🪪 License](#-license)
-- [📫 Contact](#-contact)
-- [🙏 Acknowledgments](#-acknowledgments)
 
 ---
 
