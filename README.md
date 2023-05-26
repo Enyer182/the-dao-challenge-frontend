@@ -129,8 +129,14 @@ Unique Features:
 
 ### ✅ Prerequisites
 
+## Overview
+This repository contains the frontend module for The DAO Challenge application. This application has a corresponding backend module that can be found at [the-dao-ratherLabs-challenge](https://github.com/Enyer182/the-dao-ratherLabs-challenge).
+
 Before you begin, ensure that you have the following prerequisites installed:
-> `[📌  Node.js]`
+> `[📌  Node.js
+>   📌  Metamask Extension]`
+
+
 
 ### 💻 Installation
 
@@ -151,6 +157,12 @@ npm install
 
 ### 🤖 Using the-dao-challenge-frontend
 
+run locally:
+```sh
+npm run dev
+
+```
+run production build:
 ```sh
 npm run build && node dist/main.js
 ```
@@ -159,6 +171,11 @@ npm run build && node dist/main.js
 ```sh
 #run tests
 ```
+
+### 📚 NOTE:
+Copy URL where your DAO front-end application is hosted, and paste it into the backend .env file
+is likely to tell your back-end server where requests will be coming from
+
 
 <hr />
 
