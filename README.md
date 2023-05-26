@@ -129,8 +129,13 @@ Unique Features:
 
 ### ✅ Prerequisites
 
+This repository contains the frontend module for The DAO Challenge application. This application has a corresponding backend module that can be found at [the-dao-ratherLabs-challenge](https://github.com/Enyer182/the-dao-ratherLabs-challenge).
+
 Before you begin, ensure that you have the following prerequisites installed:
-> `[📌  Node.js]`
+- [X] 📌 Node.js
+- [X] 📌 Metamask Browser Extension
+
+
 
 ### 💻 Installation
 
@@ -151,6 +156,12 @@ npm install
 
 ### 🤖 Using the-dao-challenge-frontend
 
+run locally:
+```sh
+npm run dev
+
+```
+run production build:
 ```sh
 npm run build && node dist/main.js
 ```
@@ -160,6 +171,11 @@ npm run build && node dist/main.js
 #run tests
 ```
 
+### 📚 NOTE:
+Copy URL where your DAO front-end application is hosted, and paste it into the backend .env file
+which is likely to tell your back-end server where requests will be coming from
+
+
 <hr />
 
 
@@ -167,6 +183,7 @@ npm run build && node dist/main.js
 - [X] [📌 lists all proposals and their status (pending, closed, finished,
 option A won, option B won, etc)
 - Allows to vote option A or option B ]
+- [ ] [📌 User Authentication/Login Form]
 - [ ] [📌  REAL TIME VOTING/DYNAMIC VOTING]
 - [ ] [📌  DEADLINE COUNTER]
 
