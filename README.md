@@ -187,7 +187,6 @@ option A won, option B won, etc)
 - [ ] [📌 User Authentication/Login Form]
 - [ ] [📌  REAL TIME VOTING/DYNAMIC VOTING]
 - [ ] [📌  DEADLINE COUNTER]
-- [ ] 
 
 
 ---
