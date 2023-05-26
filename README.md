@@ -130,7 +130,7 @@ Unique Features:
 ### ✅ Prerequisites
 
 Before you begin, ensure that you have the following prerequisites installed:
-> `[📌  Node.js installed]`
+> `[📌  Node.js]`
 
 ### 💻 Installation
 
