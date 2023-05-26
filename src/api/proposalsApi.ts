@@ -2,8 +2,19 @@ import api from './api';
 
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ethereum?: any;
+    ethereum?: EthereumProvider;
+  }
+
+  interface RequestAccountsCommand {
+    method: 'eth_requestAccounts';
+    params?: []; // this method doesn't take any parameters
+  }
+
+  type EthereumRequestMethod = RequestAccountsCommand; //
+
+  interface EthereumProvider {
+    request: (request: EthereumRequestMethod) => Promise<string[]>;
+    // add any other methods you need here
   }
 }
 
