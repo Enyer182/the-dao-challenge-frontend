@@ -184,8 +184,10 @@ which is likely to tell your back-end server where requests will be coming from
 - [X] [📌 lists all proposals and their status (pending, closed, finished,
 option A won, option B won, etc)
 - Allows to vote option A or option B ]
+- [ ] [📌 User Authentication/Login Form]
 - [ ] [📌  REAL TIME VOTING/DYNAMIC VOTING]
 - [ ] [📌  DEADLINE COUNTER]
+- [ ] 
 
 
 ---
