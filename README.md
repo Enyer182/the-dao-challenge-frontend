@@ -130,7 +130,7 @@ Unique Features:
 ### ✅ Prerequisites
 
 Before you begin, ensure that you have the following prerequisites installed:
-> `[📌  INSERT-PROJECT-PREREQUISITES]`
+> `[📌  Node.js installed]`
 
 ### 💻 Installation
 
