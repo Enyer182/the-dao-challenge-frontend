@@ -184,8 +184,8 @@ which is likely to tell your back-end server where requests will be coming from
 option A won, option B won, etc)
 - Allows to vote option A or option B ]
 - [ ] [📌 User Authentication/Login Form]
-- [ ] [📌  REAL TIME VOTING/DYNAMIC VOTING]
-- [ ] [📌  DEADLINE COUNTER]
+- [ ] [📌  Mint NFC Functionality]
+- [ ] [📌  Deadline UI Counter]
 
 
 ---
